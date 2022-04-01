@@ -20,15 +20,23 @@ class ICICI extends Bank {
 	}
 }
 
+class BOI extends Bank {
+	public double getROI() {
+		return 6.5;
+	}
+}
+
 
 public class MethodOverriding {
 	
 	public static void main(String[] args) {
 		HDFC h = new HDFC();
 		ICICI i = new ICICI();
+		Bank b = new BOI(); //Upcasting
 		
 		System.out.println("ROI of HDFC is "+ h.getROI() +"%");
 		System.out.println("ROI of ICICI is "+ i.getROI() +"%");
+		System.out.println("ROI of BOI is "+ b.getROI() +"%");
 	}
 
 }
